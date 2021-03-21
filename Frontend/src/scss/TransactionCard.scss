@@ -1,0 +1,22 @@
+@import "../App.scss";
+
+.transactionCard {
+  background-color: white;
+  border-radius: 8px;
+  width: 100%;
+
+  .transactionDetails {
+    border-right: 1px solid #00000038;
+
+    @include media-breakpoint-down(xs) {
+      border-right: none;
+    }
+  }
+
+  .transactionAmount {
+    text-align: right;
+    @include media-breakpoint-down(xs) {
+      text-align: left;
+    }
+  }
+}

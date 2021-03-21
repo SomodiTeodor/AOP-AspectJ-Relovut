@@ -1,0 +1,11 @@
+@import "../App.scss";
+
+.friendCardContainer {
+  &:hover {
+    background-color: #00000015;
+
+    &.clickable {
+      cursor: pointer;
+    }
+  }
+}

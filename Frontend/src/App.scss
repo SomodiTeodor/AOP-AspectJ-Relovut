@@ -1,0 +1,119 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// $BackgroundColor: rgba(30, 45, 62, 1);
+// $ForegroundColor: rgba(25, 75, 125, 1);
+
+$BackgroundColor: #e0e0e0;
+$ForegroundColor: #f3f3f3;
+$TextColor: black;
+
+* {
+  font-family: "Roboto";
+  box-sizing: border-box;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: $BackgroundColor;
+  color: $TextColor;
+}
+
+div#root {
+  width: 100%;
+  height: 100%;
+}
+
+.font--red {
+  color: red;
+}
+
+.font--green {
+  color: limegreen;
+}
+
+.container {
+  // padding: 0px 24px;
+  // padding-bottom: 64px;
+  padding: 0px;
+  height: calc(100vh - 48px);
+
+  background: $ForegroundColor;
+  // background: linear-gradient(
+  //   90deg,
+  //   $BackgroundColor 0%,
+  //   $ForegroundColor 3%,
+  //   $ForegroundColor 97%,
+  //   $BackgroundColor 100%
+  // );
+
+  > .innerContainer {
+    padding: 0px 36px;
+    padding-bottom: 48px;
+
+    background: $ForegroundColor;
+    // background: linear-gradient(
+    //   90deg,
+    //   $BackgroundColor 0%,
+    //   $ForegroundColor 3%,
+    //   $ForegroundColor 97%,
+    //   $BackgroundColor 100%
+    // );
+  }
+}
+
+.contentArea {
+  background-color: $ForegroundColor;
+}
+
+@function getBackgroundGradient($containerBreakpoint) {
+  $result: linear-gradient(
+    90deg,
+    $BackgroundColor 0%,
+    $ForegroundColor
+      calc(
+        (100vw - #{map-get($container-max-widths, $containerBreakpoint)}) / 2
+      ),
+    $ForegroundColor
+      calc(
+        100vw -
+          (100vw - #{map-get($container-max-widths, $containerBreakpoint)}) / 2
+      ),
+    $BackgroundColor 100%
+  );
+
+  @return $result;
+}
+
+@include media-breakpoint-up(sm) {
+  .contentArea {
+    background: getBackgroundGradient(sm);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .contentArea {
+    background: getBackgroundGradient(md);
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .contentArea {
+    background: getBackgroundGradient(lg);
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .contentArea {
+    background: getBackgroundGradient(xl);
+  }
+}

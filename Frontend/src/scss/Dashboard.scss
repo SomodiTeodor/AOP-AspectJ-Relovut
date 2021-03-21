@@ -1,0 +1,44 @@
+div.dashboard {
+  .dashboard-image {
+    text-align: center;
+
+    img {
+      width: 80%;
+      max-height: 40vh;
+      object-fit: contain;
+    }
+  }
+
+  .title {
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 18px 0px;
+    text-transform: capitalize;
+    font-weight: bolder;
+  }
+
+  .dashboard-callToAction {
+    padding: 24px 0px 96px 0px;
+    text-align: center;
+    font-size: 3em;
+
+    .dashboard-callToAction--button {
+      font-size: 1.75rem;
+      border-radius: 48px 0px;
+      background-color: #f56c2d;
+      border-color: #dd6228;
+
+      &:active {
+        background-color: #dd6228;
+        border-color: #c05423;
+      }
+
+      &:focus {
+        box-shadow: unset;
+        &:active {
+          box-shadow: unset;
+        }
+      }
+    }
+  }
+}

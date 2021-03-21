@@ -1,0 +1,113 @@
+// $BackgroundColor: rgba(30, 45, 62, 1);
+// $ForegroundColor: rgba(25, 75, 125, 1);
+
+@import "../App.scss";
+
+header {
+  z-index: 10;
+  position: fixed;
+  top: 0px;
+  height: 48px;
+  width: 100%;
+  background-color: $BackgroundColor;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $ForegroundColor;
+}
+
+header > .spacer {
+  flex-grow: 1;
+}
+
+header > button.btn-light {
+  margin-left: 12px;
+  // background-color: whitesmoke;
+  // border-color: rgb(231, 231, 231);
+}
+
+header {
+  img {
+    margin: 0px 4px;
+
+    height: 2.5em;
+    padding: 0px;
+
+    object-fit: contain;
+  }
+  a.navbar_logo {
+    margin: 0px 16px;
+    padding: 0px 8px 0px 4px;
+
+    &:hover {
+      font-size: 1em;
+    }
+  }
+
+  a.navbar_link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    height: 100%;
+    text-align: center;
+
+    &:hover {
+      font-size: 1.1em;
+      border-bottom: 3px solid rgba(0, 0, 0, 0.76);
+      padding-top: 3px;
+    }
+  }
+}
+
+header > a {
+  text-decoration: none;
+  color: $TextColor;
+  // margin: 0px 16px;
+  margin: 0px 4px;
+  padding: 0px 12px;
+  min-width: 96px;
+  text-align: center;
+}
+
+header > a:last-of-type {
+  margin-right: 24px;
+}
+
+header > a:hover {
+  text-decoration: none;
+  color: $TextColor;
+  font-size: 1.2rem;
+}
+
+/* 
+ * 
+ * CONTENT AREA
+ * 
+ */
+
+.contentArea {
+  position: fixed;
+  top: 48px;
+  width: 100%;
+  height: calc(100vh - 48px);
+  overflow: auto;
+}
+
+/* -- CUSTOM SCROLLBAR FOR CONTENT AREA -- */
+/* width */
+.contentArea::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+/* Track */
+// .contentArea::-webkit-scrollbar-track {
+//   background: whitesmoke;
+// }
+/* Handle */
+.contentArea::-webkit-scrollbar-thumb {
+  background: #888;
+}
+/* Handle on hover */
+.contentArea::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

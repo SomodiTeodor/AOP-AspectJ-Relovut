@@ -1,3 +1,8 @@
+
+<p align="center">
+  <img width="128" src="./Frontend/src/assets/icon.png" alt="Relovut logo">
+</p>
+
 # Relovut
 
 Relovut is an app which allows its users to add funds and send funds between each other, automatically converting from the sender's currency to the recepient's currency. Additionally, a user can add others to a friend list for easier sending of funds, can easily track their incoming and outgoing expenses, and can receive by email (if emails are enabled) a full report with all the transactions that occured in a chosen interval.
